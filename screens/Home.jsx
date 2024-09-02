@@ -1,17 +1,27 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../src/components/Navbar'
 import { useParams } from 'react-router-dom'
 import NewsContainer from '../src/components/NewsContainer'
+import Subscribe from './Subscribe'
 
 
 
 const Home = () => {
+    const [country, setCountry] = useState("in")
     const { category } = useParams();
-    const filter = category ? `category=${category}` : "country=in";
+    const [isOpen, setisOpen] = useState(false)
+
+
+    const filter = category ? `category=&${category}` : "";
+
+    useEffect(() => {
+        console.log(country)
+    }, [country])
     return (
-        <div>
-            <Navbar />
-            <NewsContainer filter={filter} />
+        <div className=' relative '>
+            <Navbar setCountry={setCountry} setisOpen={setisOpen} isOpen={isOpen} />
+            <NewsContainer filter={filter} country={country} />
+            <Subscribe isOpen={isOpen} />
 
         </div>
     )

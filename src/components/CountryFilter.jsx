@@ -1,18 +1,21 @@
+import { useState } from 'react'
 import React from 'react'
 import countryCodes from '../utils/country_code'
 import emojiFlags from 'emoji-flags'
 
 
-const CountryFilter = () => {
+const CountryFilter = ({ setCountry = { setCountry } }) => {
+
+
 
     const handleSelectChange = (e) => {
-        console.log(e.target.value)
+        setCountry(e.target.value)
 
     }
 
     return (
         <div>
-            <select onChange={handleSelectChange} className='border border-black p-3' name="Country" id="">
+            <select onChange={handleSelectChange} className='font-bold border-2 border-black outline outline-offset-1 outline-red-500  rounded-md p-3 cursor-pointer' name="Country" id="">
                 <option value={countryCodes["India"].code}>India 🇮🇳</option>
                 {Object.keys(countryCodes).map((country, index) => {
                     if (country != "India") {

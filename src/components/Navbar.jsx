@@ -6,7 +6,13 @@ import CountryFilter from './countryFilter'
 import './navbar.css'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({ setCountry = { setCountry }, setisOpen = { setisOpen }, isOpen }) => {
+
+  const handleLoginClick = () => {
+    setisOpen(true)
+    console.log(isOpen)
+
+  }
 
 
 
@@ -17,7 +23,7 @@ const Navbar = () => {
 
 
         <div className='flex items-center justify-between'>
-          <CountryFilter />
+          <CountryFilter setCountry={setCountry} />
           <Link to="/">
             <div className='flex justify-center'>
               <div className='w-16 h-16 mr-2'>
@@ -31,7 +37,11 @@ const Navbar = () => {
               </div>
             </div>
           </Link>
-          <CurrentDate />
+          <div className='flex flex-col items-center gap-2'>
+            <button className='bg-black text-white px-3 py-1 border border-white outline outline-offset-1 outline-red-500  rounded-md ' onClick={handleLoginClick}>Subscribe</button>
+            <CurrentDate />
+          </div>
+
         </div>
 
       </div>
