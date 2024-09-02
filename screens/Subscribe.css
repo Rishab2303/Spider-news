@@ -4,9 +4,21 @@
     top: 25%;
     left: 16rem;
     z-index: 10;
-    width: 50vw;
-    height: 50vh;
-    padding: 1rem;
+    width: 26vw;
+    height: 70vh;
+    padding: 2rem 1rem;
+    border-radius: 1.5rem;
+    gap: 10rem;
+}
+
+.modal-close-button {
+    position: absolute;
+    transform: scale(1.8);
+
+    top: 0;
+    left: 96%;
+
+
 }
 
 .modal-wrapper {
@@ -18,4 +30,45 @@
     top: 0;
 
 
+}
+
+.modal-number-input {
+    gap: 2rem;
+}
+
+.modal-input {
+    border: 2px solid black;
+    padding: 0.8rem 1rem;
+    padding-right: 2rem;
+    border-radius: 0.5rem;
+
+}
+
+/* .modal-input:focus {
+    border
+    outline: 2px solid red;
+} */
+
+.modal-input-button {
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+
+}
+
+.modal-input-button:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    font-weight: 700;
+}
+
+.otp-form-input {
+    gap: 1.5rem;
+}
+
+.otp-form-input input {
+    width: 2rem;
+    border: 2px solid black;
+    padding: 0.5rem;
 }

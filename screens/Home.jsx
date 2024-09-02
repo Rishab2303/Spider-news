@@ -3,6 +3,7 @@ import Navbar from '../src/components/Navbar'
 import { useParams } from 'react-router-dom'
 import NewsContainer from '../src/components/NewsContainer'
 import Subscribe from './Subscribe'
+import Footer from '../src/components/Footer'
 
 
 
@@ -21,7 +22,8 @@ const Home = () => {
         <div className=' relative '>
             <Navbar setCountry={setCountry} setisOpen={setisOpen} isOpen={isOpen} />
             <NewsContainer filter={filter} country={country} />
-            <Subscribe isOpen={isOpen} />
+            <Subscribe isOpen={isOpen} setisOpen={setisOpen} />
+            <Footer />
 
         </div>
     )
