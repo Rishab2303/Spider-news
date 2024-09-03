@@ -21,7 +21,7 @@ const CurrentDate = () => {
 
 
     return (
-        <div className='font-bold '>
+        <div className='text-xs bg-white font-bold md:text-sm  '>
             {day.day} ,{day.month} {day.date} |{day.year}
         </div>
     )

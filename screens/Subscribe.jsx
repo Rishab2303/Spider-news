@@ -39,7 +39,7 @@ const Subscribe = ({ isOpen, setisOpen }) => {
 
             {showOtpForm ? (userVerified ? <div className=' modal flex flex-col items-center ' ><div>
                 <img src="./spider2.jfif" alt="" />
-                <div className='text-3xl font-bold'>You are a Verified Spider!</div>
+                <div className='modal-verify md:text-3xl font-bold'>You are a Verified Spider!</div>
             </div>
                 <button className='modal-close-button' onClick={handleModalClose}><FontAwesomeIcon icon={faCircleXmark} /></button>
             </div> : <div className=' modal flex flex-col items-center ' >

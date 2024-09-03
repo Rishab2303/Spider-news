@@ -1,14 +1,30 @@
 .modal {
     background-color: white;
     position: fixed;
-    top: 25%;
-    left: 16rem;
+    top: 5%;
+    left: 2%;
     z-index: 10;
     width: 26vw;
     height: 70vh;
     padding: 2rem 1rem;
     border-radius: 1.5rem;
     gap: 10rem;
+    min-width: 340px;
+}
+
+.modal-verify {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+
+    .modal {
+        top: 25%;
+        left: 36%;
+        translate: (-50%, -50%);
+
+    }
 }
 
 .modal-close-button {

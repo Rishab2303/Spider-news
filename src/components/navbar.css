@@ -4,3 +4,13 @@
     font-family: "Pacifico", cursive;
 
 }
+
+
+@media (min-width: 768px) {
+
+    .nav-logo {
+        width: fit-content;
+
+    }
+
+}

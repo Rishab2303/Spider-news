@@ -13,17 +13,18 @@ const Home = () => {
     const [isOpen, setisOpen] = useState(false)
 
 
-    const filter = category ? `category=&${category}` : "";
+
 
     useEffect(() => {
         console.log(country)
     }, [country])
     return (
-        <div className=' relative '>
+        <div className=' relative bg-black'>
             <Navbar setCountry={setCountry} setisOpen={setisOpen} isOpen={isOpen} />
-            <NewsContainer filter={filter} country={country} />
+            <NewsContainer category={category} country={country} />
             <Subscribe isOpen={isOpen} setisOpen={setisOpen} />
             <Footer />
+
 
         </div>
     )
