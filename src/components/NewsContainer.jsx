@@ -90,7 +90,7 @@ const NewsContainer = ({ country }) => {
     return (
 
         <div className='w-full md:w-[80%] mx-auto container '>
-            {/* {loading && newsData.length === 0 ? <p>Loading Your News....</p> : <div className='news-strip'><div className='news-content'>{newsData[0].title}||{newsData[1].title}||{newsData[2].title}</div></div>} */}
+            {loading && newsData.length === 0 ? <p>Loading Your News....</p> : <div className='news-strip'><div className='news-content'>{newsData[0].title}||{newsData[1].title}||{newsData[2].title}</div></div>}
             {loading && newsData.length === 0 ? <p>Loading Your News....</p> : MapData(newsData)}
             {loading && newsData.length > 0 && <p>Loading more news...</p>}
 
