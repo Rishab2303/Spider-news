@@ -18,13 +18,13 @@ A React-based news app that fetches and displays the latest articles using a thi
 ## Screenshots
 
 ### Web View
-![Web View](./web.png)
+![Web View](./public/web.png)
 
 ### iPad View
-![iPad View](./ipad-view.png)
+![iPad View](./public/ipad-view.png)
 
 ### iPhone 14 Pro Max View
-![iPhone 14 Pro Max View](./iphone-14-pro-max.png)
+![iPhone 14 Pro Max View](./public/iphone-14-pro-max.png)
 
 
 
