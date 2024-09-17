@@ -24,7 +24,7 @@ A React-based news app that fetches and displays the latest articles using a thi
 ![iPad View](./public/ipad-view.png)
 
 ### iPhone 14 Pro Max View
-![iPhone 14 Pro Max View](./public/iphone-14-pro-max.png)
+![iPhone 14 Pro Max View](./public/iphone -14-pro-max.png)
 
 
 
