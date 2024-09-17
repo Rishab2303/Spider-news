@@ -16,7 +16,7 @@ export const FetchNews = async (filter) => {
 
 export const MapData = (data) => {
     return data.map((news) =>
-    (<div className="p-2 flex flex-col newsDiv : " style={{ width: '25%', gap: '1rem' }} key={news.url}>
+    (<div className="p-2 flex flex-col newsDiv  " style={{ width: '25%', gap: '1rem', "min-width": "186px" }} key={news.url}>
         <div className="w-full ">{news.urlToImage === null ? <img className=" bg-cover m-auto" src="./news_alt_img.png" alt="" /> : <img src={news.urlToImage} alt="" className="src" />}</div>
         <div className="w-full text-wrap font-bold">{`${news.title.slice(0, 70)}.....`}</div>
         <div className="newsAnchor"><a href={news.url} target="_blank">Read More</a></div>

@@ -11,7 +11,7 @@ const NewsContainer = ({ country }) => {
     const [loading, setLoading] = useState(true)
     const [page, setPage] = useState(1)
     const { category } = useParams();
-    console.log("string=", category)
+    // console.log("string=", category)
 
     useEffect(() => {
         setNewsData([]);
@@ -19,7 +19,7 @@ const NewsContainer = ({ country }) => {
         FetchNews(category)
     }
         , [category, country])
-    // console.log(newsData)
+
     // function to news data        
     const FetchNews = useCallback(async (category, page = 1) => {
 
@@ -35,7 +35,7 @@ const NewsContainer = ({ country }) => {
 
             let news = Array.isArray(data.articles) ? data.articles : [];
 
-            console.log(news)
+            console.log(data)
             setNewsData((prev) => [...prev, ...news])
             setLoading(false)
         } catch (error) {
@@ -63,7 +63,7 @@ const NewsContainer = ({ country }) => {
             FetchNews(category, nextpage)
             return nextpage
         })
-        console.log("aja bhai", page)
+
 
     }
     const handleScrollEvent = async () => {
@@ -90,7 +90,7 @@ const NewsContainer = ({ country }) => {
     return (
 
         <div className='w-full md:w-[80%] mx-auto container '>
-            {loading && newsData.length === 0 ? <p>Loading Your News....</p> : <div className='news-strip'><div className='news-content'>{newsData[0].title}||{newsData[1].title}||{newsData[2].title}</div></div>}
+            {/* {loading && newsData.length === 0 ? <p>Loading Your News....</p> : <div className='news-strip'><div className='news-content'>{newsData[0].title}||{newsData[1].title}||{newsData[2].title}</div></div>} */}
             {loading && newsData.length === 0 ? <p>Loading Your News....</p> : MapData(newsData)}
             {loading && newsData.length > 0 && <p>Loading more news...</p>}
 

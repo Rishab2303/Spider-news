@@ -8,7 +8,7 @@ import Footer from '../src/components/Footer'
 
 
 const Home = () => {
-    const [country, setCountry] = useState("in")
+    const [country, setCountry] = useState("us")
     const { category } = useParams();
     const [isOpen, setisOpen] = useState(false)
 
